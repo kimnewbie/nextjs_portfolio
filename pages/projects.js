@@ -5,7 +5,7 @@ export default function Projects() {
   return (
     <Layout>
       <Head>
-        <title>Welcome to Youjin's Next World</title>
+        <title>Welcome to Youjin&acute;s Next World</title>
         <meta name="description" content="킴뉴진의 NEXT 세계" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
