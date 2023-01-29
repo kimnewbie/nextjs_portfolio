@@ -1,6 +1,13 @@
 Tailwind css
   $ npm install -D tailwindcss
   $ npx tailwindcss init
+  $ npm install tailwindcss@3.0.24
 
 Lottie Player
   $ npm install --save react-lottie-player
+
+Dark theme
+  $ npm install next-themes@0.2.0
+
+Dotenv
+  $ npm install dotenv@16.0.1
