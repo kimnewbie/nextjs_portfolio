@@ -42,10 +42,10 @@ export default function ProjectItem({ data }) {
       <div className="p-4 flex flex-col">
         <h1 className="text-2xl font-bold">{title}</h1>
         <h3 className="mt-4 text-xl">{description}</h3>
-        <a href={github}>깃허브 바로가기</a>
-        <a href={youtube}>유튜브 시연영상 보러가기</a>
+        <a href={github}>Github</a>
+        <a href={youtube}>Youtube</a>
         <p className="my-1 ">
-          작업기간 : {start} ~ {end} ({calculatedPeriod(start, end)}일)
+          Working Period : {start} ~ {end} ({calculatedPeriod(start, end)}days)
         </p>
         <div className="break-all flex items-start mt-2">
           {tags.map((aTag) => (

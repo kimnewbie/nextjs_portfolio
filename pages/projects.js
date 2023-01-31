@@ -5,7 +5,7 @@ import ProjectItem from "./components/projects/project-item";
 
 export default function Projects({ projects }) {
   /* 클라이언트(브라우저)에서 보임 */
-  // console.log(projects)
+  console.log(projects)
 
   return (
     <Layout>
@@ -18,14 +18,13 @@ export default function Projects({ projects }) {
         <h1 className="text-4xl font-bold sm:text-6xl">
           Whole Project :
           <span className="pl-4 text-blue-500">
-            {projects.results.length}
+            {projects.results?.length}
           </span>
         </h1>
         <div className="grid grid-cols-1 gap-8 p-12 m-4 md:grid-cols-2">
           {
-            projects.results.map((aProject) => (
+            projects.results?.map((aProject) => (
               <>
-                {/* {aProject.properties.Name.title[0].plain_text}  */}
                 <ProjectItem key={aProject.id} data={aProject} />
               </>
             ))
@@ -65,9 +64,10 @@ export async function getServerSideProps() {
   const res = await fetch(`https://api.notion.com/v1/databases/${DATABASE_ID}/query`, options);
 
   const projects = await res.json();
+  console.log(projects)
 
   /* DB 표에 빈공간 있으면 plain_text가 undefined라서 error */
-  const projectNames = projects.results.map((aProject) => {
+  const projectNames = projects.results?.map((aProject) => {
     return aProject.properties.Name.title[0].plain_text
   });
 
