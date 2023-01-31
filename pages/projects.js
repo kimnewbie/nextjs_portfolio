@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Layout from "./components/layout";
-import { NOTION_TOKEN, NOTION_DATABASE_ID } from '../config';
 import ProjectItem from "./components/projects/project-item";
 
 export default function Projects({ projects }) {
@@ -47,7 +46,7 @@ export async function getServerSideProps() {
       accept: 'application/json',
       'Notion-Version': '2022-06-28',
       'content-type': 'application/json',
-      Authorization: `Bearer ${NOTION_TOKEN}`
+      Authorization: `Bearer ${process.env.NOTION_TOKEN}`
     },
     body: JSON.stringify({
       // filter: 'string',
@@ -62,7 +61,7 @@ export async function getServerSideProps() {
     })
   };
 
-  const res = await fetch(`https://api.notion.com/v1/databases/${NOTION_DATABASE_ID}/query`, options);
+  const res = await fetch(`https://api.notion.com/v1/databases/${process.env.NOTION_DATABASE_ID}/query`, options);
 
   const projects = await res.json();
 
