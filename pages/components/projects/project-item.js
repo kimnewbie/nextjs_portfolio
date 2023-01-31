@@ -17,13 +17,13 @@ export default function ProjectItem({ data }) {
     var startDate = new Date(startDateStringArray[0], startDateStringArray[1], startDateStringArray[2]);
     var endDate = new Date(endDateStringArray[0], endDateStringArray[1], endDateStringArray[2]);
 
-    console.log(`startDate: ${startDate}`)
-    console.log(`endDate: ${endDate}`)
+    // console.log(`startDate: ${startDate}`)
+    // console.log(`endDate: ${endDate}`)
 
     const diffInMs = Math.abs(endDate - startDate);
     const result = diffInMs / (1000 * 60 * 60 * 24);
 
-    console.log(`기간 : ${result}`)
+    // console.log(`기간 : ${result}`)
     return result;
   };
 
