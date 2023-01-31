@@ -63,7 +63,10 @@ export async function getServerSideProps() {
 
   const res = await fetch(`https://api.notion.com/v1/databases/${process.env.NOTION_DATABASE_ID}/query`, options);
 
+
   const projects = await res.json();
+
+  console.log(projects)
 
   /* DB 표에 빈공간 있으면 plain_text가 undefined라서 error */
   const projectNames = projects.results.map((aProject) => {
