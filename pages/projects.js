@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Layout from "./components/layout";
-import { NOTION_NOTION_TOKEN, NOTION_DATABASE_ID } from '../config';
+import { NOTION_TOKEN, NOTION_DATABASE_ID } from '../config';
 import ProjectItem from "./components/projects/project-item";
 
 export default function Projects({ projects }) {
