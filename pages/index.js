@@ -1,12 +1,10 @@
 import Head from 'next/head'
-import Animation from './components/home/animation'
-import Hero from './components/home/hero'
-import Layout from './components/layout'
+import Hero from '../components/home/hero'
+import Layout from '../components/layout'
 
 export default function Home() {
   return (
     <Layout>
-
       <Head>
         <title>Welcome to Youjin&acute;s Next World</title>
         <meta name="description" content="킴뉴진의 NEXT 세계" />

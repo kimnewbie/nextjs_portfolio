@@ -1,6 +1,6 @@
 import Head from "next/head";
-import Layout from "./components/layout";
-import ProjectItem from "./components/projects/project-item";
+import Layout from "../components/layout";
+import ProjectItem from "../components/projects/project-item";
 
 export default function Projects({ projects }) {
   /* 클라이언트(브라우저)에서 보임 */
